@@ -17,28 +17,31 @@
 
 <?php
 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST['username'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-        $conn = new mysqli("localhost", "root", "", "user_auth");
+        $dsn = 'mysql:host=localhost;dbname=user_auth';
+        $db_user = 'legendarychevy';
+        $db_pass = 'magpie96';
 
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        try {
+            $conn = new PDO($dsn, $db_user, $db_pass);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "insert into users (username, password) values (?, ?)";
-        $stmt =$conn->prepare($sql);
-        $stmt->bind_param("ss", $username, $password);
+            $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute([$username, $password]);
 
-        if ($stmt->execute()) {
             echo "Registration successful!";
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
         }
-        else {
-            echo "Error: " . $stmt->error;
-        }
-        $stmt->close();
-        $conn->close();
-        
+
+        $conn = null;
     }
 ?>
