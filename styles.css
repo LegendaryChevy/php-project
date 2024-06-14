@@ -1,0 +1,13 @@
+#header{
+    display: flex;
+    height: 500%;
+    background-color: black;
+    color: white;
+}
+
+#header a {
+    position: relative;
+    align-items: end;
+    color: white;
+    text-decoration: none;
+}

@@ -2,8 +2,10 @@
 <html>
     <head>
         <title>Login</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <?php include('header.php')?>
         <h2>Login</h2>
         <form action="login.php" method="post">
             Username: <input type="text" name="username" required><br>
@@ -12,6 +14,10 @@
         </form>
     </body>
 </html>
+
+
+
+
 
 <?php
 session_start();    
@@ -42,6 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['username'] = $username;
 
                 echo "Login successful! Welcome, " . $username;
+                sleep(2);
+                header('location: dashboard.php');
+                exit();
             } else {
                 echo "Invalid username or password";
             }

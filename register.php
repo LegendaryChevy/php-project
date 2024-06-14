@@ -2,8 +2,10 @@
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <?php include("header.php");?>
     <h2>Register</h2>
     <form action="register.php" method="post">
         Username:<input type="text" name="username" required><br>
@@ -13,6 +15,8 @@
     </form>
 </body>
 </html>
+
+
 
 
 <?php
@@ -38,6 +42,8 @@
             $stmt->execute([$username, $password]);
 
             echo "Registration successful!";
+            sleep(2);
+            header('Location: login.php');
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
