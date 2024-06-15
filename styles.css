@@ -1,13 +1,20 @@
 #header{
+    position: relative;
     display: flex;
     height: 500%;
     background-color: black;
     color: white;
 }
 
+#nav_bar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 10px;
+}
 #header a {
-    position: relative;
-    align-items: end;
+   
     color: white;
     text-decoration: none;
 }
