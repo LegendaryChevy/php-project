@@ -1,19 +1,21 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <title>Register</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="styles.css">
+        </head>
+    <body>
     <?php include("header.php");?>
-    <h2>Register</h2>
-    <form action="register.php" method="post">
-        Username:<input type="text" name="username" required><br>
-        Password:<input type="password" name="password" required><br>
+        <div id="register_box" class="black_bg">
+            <h2 class="black_bg">Register</h2>
+            <form action="register.php" method="post">
+                Username:<input class="inputs" type="text" name="username" required><br>
+                Password:<input class="inputs" type="password" name="password" required><br>
 
-        <input type="submit" name="register" value="Register">
-    </form>
-</body>
+                <input class="inputs" type="submit" name="register" value="Register">
+            </form>
+        </div>
+    </body>
 </html>
 
 

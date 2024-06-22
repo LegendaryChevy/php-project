@@ -5,13 +5,16 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <?php include('header.php')?>
-        <h2>Login</h2>
-        <form action="login.php" method="post">
-            Username: <input type="text" name="username" required><br>
-            Password: <input type="password" name="password" required><br>
-            <input type="submit" name="login" value="Login">
-        </form>
+    <?php include('header.php')?>   
+    <div id="login_box" class="black_bg">
+       
+            <h2 class="black_bg">Login</h2>
+            <form class="black_bg" action="login.php" method="post">
+                Username: <input class="inputs" type="text" name="username" required><br>
+                Password: <input class="inputs" type="password" name="password" required><br>
+                <input class="inputs" type="submit" name="login" value="Login">
+            </form>
+        </div>
     </body>
 </html>
 

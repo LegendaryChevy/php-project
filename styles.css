@@ -1,20 +1,42 @@
+* {
+    background-color: grey;
+}
+
+#header h1 {
+    background-color: black !important;
+}
+
 #header{
     position: relative;
     display: flex;
     height: 500%;
-    background-color: black;
     color: white;
 }
 
-#nav_bar {
+#header #nav_bar {
     position: absolute;
     bottom: 0;
     right: 0;
     display: flex;
     gap: 10px;
 }
+
+.black_bg {
+    background-color: black !important;
+    color: white;
+}
+
+.inputs {
+    background-color: white;
+}
 #header a {
    
     color: white;
     text-decoration: none;
+}
+
+#login_box, #register_box {
+    left: 10%;
+    position: relative;
+    width: 20%;
 }
