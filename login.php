@@ -11,8 +11,8 @@
             <h2 class="black_bg">Login</h2>
             <form class="black_bg" action="login.php" method="post">
                 Username: <input class="inputs" type="text" name="username" required><br>
-                Password: <input class="inputs" type="password" name="password" required><br>
-                <input class="inputs" type="submit" name="login" value="Login">
+                Password: <input class="password" class="inputs" type="password" name="password" required><br>
+                <input id="login_submit" class="inputs" type="submit" name="login" value="Login">
             </form>
         </div>
     </body>

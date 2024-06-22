@@ -21,22 +21,44 @@
     gap: 10px;
 }
 
+.inputs,.password {
+    background-color: white !important;
+}
+
+.password {
+    position: relative;
+    left: 4px;
+}
+
 .black_bg {
     background-color: black !important;
     color: white;
 }
 
-.inputs {
-    background-color: white;
-}
+
 #header a {
    
     color: white;
     text-decoration: none;
 }
 
+#login_box h2 {
+    margin: 2px;
+}
+
+#login_submit, #register_submit {
+    left: 78%;
+    position: relative;
+}
 #login_box, #register_box {
-    left: 10%;
+    margin-top: 5%;
+    left: 5%;
     position: relative;
     width: 20%;
+    border-color: white;
+    padding: 5px;
+    border: 1px;
+    border-width: 10px;
+    border-radius: 10px;
+    
 }

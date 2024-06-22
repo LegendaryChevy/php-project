@@ -10,9 +10,9 @@
             <h2 class="black_bg">Register</h2>
             <form action="register.php" method="post">
                 Username:<input class="inputs" type="text" name="username" required><br>
-                Password:<input class="inputs" type="password" name="password" required><br>
+                Password:<input class="password" class="inputs" type="password" name="password" required><br>
 
-                <input class="inputs" type="submit" name="register" value="Register">
+                <input id="register_submit" class="inputs" type="submit" name="register" value="Register">
             </form>
         </div>
     </body>
