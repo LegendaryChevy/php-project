@@ -3,11 +3,13 @@
     <head>
         <title>Login</title>
         <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-    <?php include('header.php')?>   
+    <?php include('header.php')?>  
+    <div class="sidebar"></div> 
     <div id="login_box" class="black_bg">
-       
+           
             <h2 class="black_bg">Login</h2>
             <form class="black_bg" action="login.php" method="post">
                 Username: <input class="inputs" type="text" name="username" required><br>
